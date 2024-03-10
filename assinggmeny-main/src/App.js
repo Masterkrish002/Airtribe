@@ -15,7 +15,7 @@ function App() {
       color: "#ffd4d8",
     },
     {
-      title: "in progress",
+      title: "In progress",
       tasks: ["Task 4", "Task 6"],
       color: "#fbf0d4",
     },
