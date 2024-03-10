@@ -24,8 +24,8 @@ function Tasks({ props, index, moveTask, updateTasksOrder, sectionIndex }) {
         <Container ref={(node) => ref(drop(node))}>
             <Title>{props}</Title>
             <Icons>
-                <Link to={`/task/${sectionIndex}/${index}`} style={{ textDecoration: 'none', color: 'inherit' }}></Link>
-                    <MdEdit/>
+                <Link to={`/task/${sectionIndex}/${index}`} style={{ textDecoration: 'none', color: 'inherit' }}><MdEdit/></Link>
+                    
             </Icons>
         </Container>
     );
