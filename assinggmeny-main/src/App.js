@@ -15,12 +15,12 @@ function App() {
       color: "#ffd4d8",
     },
     {
-      title: "In progress",
+      title: "In Progress",
       tasks: ["Task 4", "Task 6"],
       color: "#fbf0d4",
     },
     {
-      title: "completed",
+      title: "Completed",
       tasks: ["Task 7", "Task 8", "Task 9"],
       color: "#cde8e2",
     },
