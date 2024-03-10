@@ -3,14 +3,13 @@ import Section from "./components/Section";
 import styled from "styled-components";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { useParams } from "react-router-dom";
 
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TaskDetails from "./components/TaskDetails";
 function App() {
   const intialsections = [
     {
-      title: "Not started",
+      title: "Not Started",
       tasks: ["Task 1", "Task 2", "Task 3"],
       color: "#ffd4d8",
     },
@@ -48,6 +47,8 @@ function App() {
   };
   const [sections, setSections] = useState(intialsections);
   return (
+    <>
+    <Heading>Task Holder</Heading>
     <DndProvider backend={HTML5Backend}>
       <Router>
         <Container>
@@ -81,6 +82,7 @@ function App() {
         </Container>
       </Router>
     </DndProvider>
+  </>
   );
 }
 
@@ -90,4 +92,14 @@ const Container = styled.div`
 
   align-items: center;
   justify-content: center;
+`;
+const Heading = styled.h1`
+  text-align: center;
+  font-size: 2em;
+
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  padding: 20px;
 `;

@@ -23,7 +23,7 @@ function NewCard({ onAddNewCard }) {
                 onChange={handleInputChange}
             />
             <AddButton onClick={handleAddCard}>
-                <Title>Add a new card</Title>
+                <Title>Add new Task</Title>
             </AddButton>
         </Container>
     );
@@ -36,13 +36,13 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    width: 30vw;
+    // border: 2px solid gray;
+    width: 28vw;
+    height: 15vh;
     box-sizing: border-box;
     margin: 20px;
     background-color: #fff;
     border-radius: 5px;
-    /* border: 5px solid #000; */
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   `;
 
@@ -50,21 +50,21 @@ const AddButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 95%;
+    height: 40px;
+    width: 90%;
     background-color: #fff;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    padding: 0 10px;
+    padding: 0 8px;
     cursor: pointer;
   `;
 
 const Input = styled.input`
     height: 30px;
-    width: 90%;
+    width: 80%;
     margin: 10px 0;
     padding: 0 10px;
-    border: 1px solid #ccc;
+    border: 2px solid gray;
     border-radius: 3px;
   `;
 

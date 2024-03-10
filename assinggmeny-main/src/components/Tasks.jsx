@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { MdEdit } from "react-icons/md";
 import { Link } from 'react-router-dom';
-import { MdDelete } from "react-icons/md";
 import { useDrag, useDrop } from 'react-dnd';
 
 function Tasks({ props, index, moveTask, updateTasksOrder, sectionIndex }) {
@@ -21,17 +20,14 @@ function Tasks({ props, index, moveTask, updateTasksOrder, sectionIndex }) {
             }
         },
     });
-
     return (
-        <Link to={`/task/${sectionIndex}/${index}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Container ref={(node) => ref(drop(node))}>
-                <Title>{props}</Title>
-                <Icons>
-                    <MdEdit />
-                    <MdDelete />
-                </Icons>
-            </Container>
-        </Link>
+        <Container ref={(node) => ref(drop(node))}>
+            <Title>{props}</Title>
+            <Icons>
+                <Link to={`/task/${sectionIndex}/${index}`} style={{ textDecoration: 'none', color: 'inherit' }}></Link>
+                    <MdEdit/>
+            </Icons>
+        </Container>
     );
 }
 
@@ -39,10 +35,11 @@ export default Tasks;
 
 const Container = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
-    width: 95%;
+    width: 80%;
+    max-width: 150px;
     background-color: #fff;
     border-radius: 5px 5px 0 0;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
@@ -65,4 +62,5 @@ const Icons = styled.div`
     font-size: 1.5em;
     color: #555;
     margin-left: 10px;
+    cursor: pointer;
 `;

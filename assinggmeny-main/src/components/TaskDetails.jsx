@@ -35,11 +35,6 @@ function TaskDetails({ sections, setSections }) {
                 value={editedTitle}
                 onChange={(e) => setEditedTitle(e.target.value)}
             />
-            <SectionInput
-                type="text"
-                value={editedSection}
-                onChange={(e) => setEditedSection(e.target.value)}
-            />
             <SaveButton onClick={handleSave}>Save</SaveButton>
         </Container>
     );
