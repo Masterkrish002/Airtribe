@@ -10,7 +10,7 @@ import TaskDetails from "./components/TaskDetails";
 function App() {
   const intialsections = [
     {
-      title: "To Do",
+      title: "Not started",
       tasks: ["Task 1", "Task 2", "Task 3"],
       color: "#ffd4d8",
     },
@@ -20,7 +20,7 @@ function App() {
       color: "#fbf0d4",
     },
     {
-      title: "Done",
+      title: "Completed",
       tasks: ["Task 7", "Task 8", "Task 9"],
       color: "#cde8e2",
     },
